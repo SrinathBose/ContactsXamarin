@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NavigationPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Contact" 
+		x:Class="Contact.ContactPage">
+		<StackLayout Padding="0,25,0,0" Orientation="Vertical">
+			<Label Text="My Contacts" 
+					HorizontalOptions="Center"
+					FontSize="25" />
+
+			<ListView x:Name="ContactList" 
+				RowHeight="90" 
+				BackgroundColor="#563fab" 
+				SeparatorColor ="White" 
+				VerticalOptions="CenterAndExpand" 
+				ItemsSource="contacts">
+				<!--SelectedItem = "{ Binding Source = { x:Reference selectedContact }, Path = Text } " -->
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<Label Text = "{ Binding Number }" TextColor="White"/>
+							<Label Text = "{ Binding Address }" TextColor = "Yellow"/>
+							<Label Text = "{ Binding Name }" TextColor="Aqua" />
+					</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+
+			<Button Text="Click Me"
+					TextColor="Purple"
+					BorderColor="Green"
+			Clicked="OnButtonClicked"/>
+			</StackLayout>
+</NavigationPage>
