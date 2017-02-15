@@ -1,6 +1,65 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Contact.AddContactView">
-	<Label Text="My Contacts" 
-					HorizontalOptions="Center"
-					FontSize="25" />
+	<StackLayout>
+		<Label Text="Add New Contacts" 
+				HorizontalOptions="CenterAndExpand"
+				VerticalOptions="StartAndExpand"
+				FontSize="25" />
+		<Label Text="Enter Name"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				TextColor="Navy"
+				Margin="10,10,10,10"
+				FontAttributes="Bold"
+				FontSize="15"/>
+		<Entry
+				x:Name="nameEntry"
+				TextColor="Purple"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				Margin="10,10,10,10"
+				FontAttributes="Italic"
+				Placeholder="Name"
+				FontSize="13"/>
+		<Label Text="Enter Number"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				Margin="10,10,10,10"
+				TextColor="Navy"
+				FontAttributes="Bold"
+				FontSize="15"/>
+		<Entry
+				x:Name="numberEntry"
+				TextColor="Purple"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				Margin="10,10,10,10"
+				FontAttributes="Italic"
+				Placeholder="Number"
+				FontSize="13"/>
+		<Label Text="Enter Address"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				TextColor="Navy"
+				Margin="10,10,10,10"
+				FontAttributes="Bold"
+				FontSize="15"/>
+		<Entry
+				x:Name="addressEntry"
+				TextColor="Purple"
+				Margin="10,10,10,10"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				FontAttributes="Italic"
+				Placeholder="Address"
+				FontSize="13"/>
+		<Button
+				Text="ADD"
+				Margin="10,10,10,50"
+				TextColor="White"
+				BackgroundColor="Aqua"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="EndAndExpand"
+				Clicked="OnAddContactButtonClicked"/>
+	</StackLayout>
 </ContentPage>

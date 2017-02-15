@@ -17,8 +17,20 @@ namespace Contact {
     public partial class AddContactView : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Entry nameEntry;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Entry numberEntry;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Entry addressEntry;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(AddContactView));
+            nameEntry = this.FindByName <global::Xamarin.Forms.Entry>("nameEntry");
+            numberEntry = this.FindByName <global::Xamarin.Forms.Entry>("numberEntry");
+            addressEntry = this.FindByName <global::Xamarin.Forms.Entry>("addressEntry");
         }
     }
 }

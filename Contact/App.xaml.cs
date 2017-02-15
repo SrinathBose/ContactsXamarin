@@ -7,8 +7,7 @@ namespace Contact
 		public App()
 		{
 			InitializeComponent();
-
-			MainPage = new ContactPage();
+			MainPage = new NavigationPage(new ContactPage());
 		}
 
 		protected override void OnStart()
