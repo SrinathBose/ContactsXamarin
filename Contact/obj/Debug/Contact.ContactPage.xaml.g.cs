@@ -14,7 +14,7 @@ namespace Contact {
     using Xamarin.Forms.Xaml;
     
     
-    public partial class ContactPage : global::Xamarin.Forms.NavigationPage {
+    public partial class ContactPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView ContactList;
