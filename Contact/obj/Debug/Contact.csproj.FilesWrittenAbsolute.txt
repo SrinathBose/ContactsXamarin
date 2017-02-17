@@ -20,3 +20,7 @@
 /Users/sbose/Desktop/Xamarin Projects/Contact/Contact/obj/Debug/Contact.dll
 /Users/sbose/Desktop/Xamarin Projects/Contact/Contact/obj/Debug/Contact.dll.mdb
 /Users/sbose/Desktop/Xamarin Projects/Contact/Contact/bin/Debug/system.data.dll
+/Users/sbose/Desktop/Xamarin Projects/Contact/Contact/obj/Debug/Contact.Views.AddContactView.xaml
+/Users/sbose/Desktop/Xamarin Projects/Contact/Contact/obj/Debug/Contact.Views.ContactPage.xaml
+/Users/sbose/Desktop/Xamarin Projects/Contact/Contact/obj/Debug/Contact.Views.AddContactView.xaml.g.cs
+/Users/sbose/Desktop/Xamarin Projects/Contact/Contact/obj/Debug/Contact.Views.ContactPage.xaml.g.cs

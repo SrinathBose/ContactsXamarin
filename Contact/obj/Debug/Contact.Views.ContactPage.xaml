@@ -23,9 +23,9 @@
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>
-							<Label Text = "{ Binding Name }" TextColor="Aqua" />
 							<Label Text = "{ Binding Number }" TextColor="White"/>
 							<Label Text = "{ Binding Address }" TextColor = "Yellow"/>
+							<Label Text = "{ Binding Name }" TextColor="Aqua" />
 					</ViewCell>
 					</DataTemplate>
 				</ListView.ItemTemplate>
