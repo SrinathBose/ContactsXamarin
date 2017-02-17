@@ -16,7 +16,7 @@ namespace Contact
 			InitializeComponent();
 
 			provider = new ContactsProvider();
-            ContactList.ItemsSource = provider.getcontacts();
+            ContactList.ItemsSource = provider.Getcontacts();
 
 			ContactList.ItemTemplate = new DataTemplate(typeof(CustomCell));
 		}
@@ -29,7 +29,7 @@ namespace Contact
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            provider.getcontacts();
+            provider.Getcontacts();
         }
 	}
 }
