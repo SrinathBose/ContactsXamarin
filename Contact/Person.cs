@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text.RegularExpressions;
+
 namespace Contact
 {
 	public class Person
@@ -6,8 +8,9 @@ namespace Contact
 		private string _nameString;
 		private long _numberLong;
 		private string _addressString;
-		 
-		public Person(string nameString, long numberLong, string addressString)
+
+        private Person() { }
+        private Person(string nameString, long numberLong, string addressString)
 		{
 			_nameString = nameString;
 			_numberLong = numberLong;
@@ -52,5 +55,18 @@ namespace Contact
 					_addressString = value;
 			}
 		}
+
+        public static Person CreatePersonWithData(string nameString, string numberString, string addressstring)
+        {
+
+            if (nameString == null || numberString == null || addressstring == null)
+                throw new PersonNullDataException();
+            else if (nameString.Trim().Equals("") || numberString.Trim().Equals("") || addressstring.Trim().Equals("") )
+                throw new PersonNullDataException();
+            else if (!Regex.IsMatch(numberString, @"^[0-9]*$"))
+                throw new PersonNumberFormatException();
+            else
+                return new Person(nameString.Trim(), Convert.ToInt64(numberString.Trim()), addressstring.Trim());
+        }
 	}
 }
