@@ -28,31 +28,32 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
-    <EmbeddedResource Include="ContactPage.xaml" />
+    <EmbeddedResource Include="Views\AddContactView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ContactPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ContactPage.xaml.cs">
-      <DependentUpon>ContactPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddContactView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <Compile Include="Person.cs" />
-    <Compile Include="AddContactView.xaml.cs">
+    <Compile Include="ContactsProvider.cs" />
+    <Compile Include="Interfaces\IContactPreferences.cs" />
+    <Compile Include="Interfaces\IDatabaseHelper.cs" />
+    <Compile Include="Views\AddContactView.xaml.cs">
       <DependentUpon>AddContactView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ContactsProvider.cs" />
-    <Compile Include="CustomCell.cs" />
-    <Compile Include="IContactPreferences.cs" />
-    <Compile Include="PersonNullDataException.cs" />
-    <Compile Include="PersonNumberFormatException.cs" />
-    <Compile Include="PersonTable.cs" />
-    <Compile Include="IDatabaseHelper.cs" />
+    <Compile Include="Views\CustomCell.cs" />
+    <Compile Include="PersonFiles\Person.cs" />
+    <Compile Include="PersonFiles\PersonNumberFormatException.cs" />
+    <Compile Include="PersonFiles\PersonTable.cs" />
     <Compile Include="ContactDataBaseManager.cs" />
+    <Compile Include="Views\ContactPage.xaml.cs">
+      <DependentUpon>ContactPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -91,6 +92,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Views\" />
+    <Folder Include="PersonFiles\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

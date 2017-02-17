@@ -1,6 +1,7 @@
 ﻿using Xamarin.Forms;
 using SQLite;
 using System;
+using System.Collections.Generic;
 
 namespace Contact
 {
@@ -14,17 +15,25 @@ namespace Contact
             connection.CreateTable<PersonTable>();
         }
 
-        public bool InsertPersonIntoDataBase(string nameStr, string numberStr, string addressStr)
+        public void InsertPersonIntoDataBase(Person newPerson)
         {
             PersonTable newContact = new PersonTable();
-            newContact.nameString = nameStr;
-            newContact.numberLong = Convert.ToInt64(numberStr);
-            newContact.addressString = addressStr;
+            newContact.nameString = newPerson.nameString;
+            newContact.numberLong = newPerson.numberLong;
+            newContact.addressString = newPerson.addressString;
 
             connection.Insert(newContact);
-
-            return true;
         }
 
+        public List<Person> GetPersonFromDatabase()
+        {
+            var result = connection.Table<PersonTable>();
+            List<Person> persons = new List<Person>();
+
+            foreach (var x in result)
+                persons.Add(new Person(x.nameString,x.numberLong,x.addressString));
+            
+            return persons;
+        }
     }
 }
